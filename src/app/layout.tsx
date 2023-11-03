@@ -6,27 +6,26 @@ import BackToTop from "@/components/back-to-top";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 export const metadata: Metadata = {
-  title: "Eric Huang | Personal",
+  title: "Zack DeParle | Portfolio",
   authors: [
-    { name: "Eric Huang", url: "https://github.com/erich2s" },
-    { name: "黄士崧", url: "https://github.com/erich2s" },
+    { name: "Zack DeParle", url: "https://github.com/zdeparle" },
   ],
-  description: "Eric Huang's personal portfolio website, 黄士崧的个人网站",
+  description: "Zack DeParle's personal portfolio website.",
   openGraph: {
-    title: "Eric Huang | Personal",
-    description: "Eric Huang's personal portfolio website, 黄士崧的个人网站",
-    url: "https://www.erichuang.art",
+    title: "Zack DeParle | Portfolio",
+    description: "Zack DeParle's personal portfolio website.",
+    url: "https://www.ZackDeParle.com",
     images: [
       {
-        url: "/photo.jpeg",
-        alt: "Eric Huang | Personal",
+        url: "/photo.jpeg", // Make sure this path points to your new photo in the public folder
+        alt: "Zack DeParle | Portfolio",
         width: 640,
         height: 800,
       },
     ],
   },
   alternates: {
-    canonical: "https://www.erichuang.art",
+    canonical: "https://www.ZackDeParle.com",
   },
 };
 

@@ -3,39 +3,71 @@ import MotionList from "@/components/motion-list";
 import Image from "next/image";
 import reactIcon from "@/assets/icons/react.png";
 import nextjsIcon from "@/assets/icons/next-js.png";
-import vueIcon from "@/assets/icons/vue.png";
 import typescriptIcon from "@/assets/icons/typescript.png";
 import javascriptIcon from "@/assets/icons/javascript.png";
 import pythonIcon from "@/assets/icons/python.png";
 import javaIcon from "@/assets/icons/java.png";
-import html5Icon from "@/assets/icons/html5.png";
-import tailwindcssIcon from "@/assets/icons/tailwindcss.png";
-import shadcnuiIcon from "@/assets/icons/shadcn-ui.png";
-import pnpmIcon from "@/assets/icons/pnpm.png";
-import viteIcon from "@/assets/icons/vite.png";
-import prettierIcon from "@/assets/icons/prettier.png";
-import nodejsIcon from "@/assets/icons/nodejs.png";
-import nestjsIcon from "@/assets/icons/nest-js.png";
-import expressjsIcon from "@/assets/icons/express-js.png";
+import solidworksIcon from "@/assets/icons/solidworks.png";
+import fusion360Icon from "@/assets/icons/fusion360.png";
+import catiaIcon from "@/assets/icons/catia.png";
+import autocadIcon from "@/assets/icons/autocad.png";
+import autodeskInventorIcon from "@/assets/icons/autodesk-inventor.png";
+import matlabIcon from "@/assets/icons/matlab.png";
+import pytorchIcon from "@/assets/icons/pytorch.png";
+import tensorflowIcon from "@/assets/icons/tensorflow.png";
+import nxIcon from "@/assets/icons/nx.png";
+import ntopologyIcon from "@/assets/icons/ntopology.png";
 import prismaIcon from "@/assets/icons/prisma.png";
 import mysqlIcon from "@/assets/icons/mysql.png";
-import springbootIcon from "@/assets/icons/springboot.png";
 import dockerIcon from "@/assets/icons/docker.png";
 import gitIcon from "@/assets/icons/git.png";
 import ubuntuIcon from "@/assets/icons/ubuntu.svg";
 import macosIcon from "@/assets/icons/macos.png";
 import vscodeIcon from "@/assets/icons/vscode.png";
-import arcIcon from "@/assets/icons/arc.png";
-import warpIcon from "@/assets/icons/warp.webp";
-import postmanIcon from "@/assets/icons/postman.svg";
-import davinciResolveIcon from "@/assets/icons/davinci-resolve.png";
-import lightroomIcon from "@/assets/icons/lightroom.png";
-import ExpoIcon from "@/assets/icons/expo.png";
-import githubActionsIcon from "@/assets/icons/github-actions.png";
-import trpcIcon from "@/assets/icons/trpc.svg";
+import nodejsIcon from "@/assets/icons/nodejs.png";
+import expressjsIcon from "@/assets/icons/express-js.png"; // Add expressjs icon
+import CIcon from "@/assets/icons/CIcon.png";
+// Rest of the code remains the same
+// Rest of the code remains the same
+
 export default function skills() {
   const data = [
     {
+      title: "CAD and Design",
+      skills: [
+        {
+          name: "Solidworks",
+          icon: solidworksIcon,
+        },
+        {
+          name: "Fusion 360",
+          icon: fusion360Icon,
+        },
+        {
+          name: "CATIA",
+          icon: catiaIcon,
+        },
+        {
+          name: "AutoCAD",
+          icon: autocadIcon,
+        },
+        {
+          name: "Autodesk Inventor",
+          icon: autodeskInventorIcon,
+        },
+        {
+          name: "Siemens NX",
+          icon: nxIcon,
+        },
+        {
+          name: "nTopology",
+          icon: ntopologyIcon,
+        },
+        // Add more CAD and design skills as needed
+      ],
+    },
+    {
+      
       title: "Web Development",
       skills: [
         {
@@ -47,14 +79,6 @@ export default function skills() {
           icon: nextjsIcon,
         },
         {
-          name: "Vue.js",
-          icon: vueIcon,
-        },
-        {
-          name: "tRPC",
-          icon: trpcIcon,
-        },
-        {
           name: "TypeScript",
           icon: typescriptIcon,
         },
@@ -62,106 +86,16 @@ export default function skills() {
           name: "JavaScript",
           icon: javascriptIcon,
         },
-        {
-          name: "HTML5",
-          icon: html5Icon,
-        },
-        {
-          name: "Tailwind CSS",
-          icon: tailwindcssIcon,
-        },
-
-        {
-          name: "shadcn/ui",
-          icon: shadcnuiIcon,
-        },
-        {
-          name: "PNPM",
-          icon: pnpmIcon,
-        },
-        {
-          name: "Vite",
-          icon: viteIcon,
-        },
-        {
-          name: "Prettier",
-          icon: prettierIcon,
-        },
+        // Add more web development skills as needed
       ],
     },
-    {
-      title: "Backend Development",
-      skills: [
-        {
-          name: "Node.js",
-          icon: nodejsIcon,
-        },
-        {
-          name: "Nest.js",
-          icon: nestjsIcon,
-        },
-        {
-          name: "Express.js",
-          icon: expressjsIcon,
-        },
-        {
-          name: "Prisma ORM",
-          icon: prismaIcon,
-        },
-        {
-          name: "MySQL",
-          icon: mysqlIcon,
-        },
-        {
-          name: "Spring Boot (a lil' bit..)",
-          icon: springbootIcon,
-        },
-      ],
-    },
-    {
-      title: "Mobile Development",
-      skills: [
-        {
-          name: "React Native",
-          icon: reactIcon,
-        },
-        {
-          name: "Expo",
-          icon: ExpoIcon,
-        },
-      ],
-    },
-    {
-      title: "DevOps",
-      skills: [
-        {
-          name: "Git",
-          icon: gitIcon,
-        },
-        {
-          name: "GitHub Actions",
-          icon: githubActionsIcon,
-        },
-        {
-          name: "Docker",
-          icon: dockerIcon,
-        },
-        {
-          name: "Ubuntu",
-          icon: ubuntuIcon,
-        },
-      ],
-    },
+    
     {
       title: "Languages",
       skills: [
         {
-          name: "TypeScript",
-          icon: typescriptIcon,
-        },
-        {
-          name: "JavaScript",
-          icon: javascriptIcon,
+          name: "C",
+          icon: CIcon,
         },
         {
           name: "Python",
@@ -171,46 +105,32 @@ export default function skills() {
           name: "Java",
           icon: javaIcon,
         },
+        {
+          name: "MATLAB",
+          icon: matlabIcon,
+        }
+        
+        // Add more programming languages as needed
       ],
     },
+    
     {
-      title: "Tools & Environment",
+      title: "Machine Learning",
       skills: [
         {
-          name: "macOS",
-          icon: macosIcon,
+          name: "PyTorch",
+          icon: pytorchIcon,
         },
         {
-          name: "VS Code",
-          icon: vscodeIcon,
+          name: "Tensorflow",
+          icon: tensorflowIcon,
         },
-        {
-          name: "Arc",
-          icon: arcIcon,
-        },
-        {
-          name: "Warp Terminal",
-          icon: warpIcon,
-        },
-        {
-          name: "Postman",
-          icon: postmanIcon,
-        },
+        ,
+        // Add more machine learning skills as needed
       ],
     },
-    {
-      title: "Visual",
-      skills: [
-        {
-          name: "DaVinci Resolve",
-          icon: davinciResolveIcon,
-        },
-        {
-          name: "Lightroom",
-          icon: lightroomIcon,
-        },
-      ],
-    },
+   
+    // Add more skill categories as needed
   ];
 
   return (

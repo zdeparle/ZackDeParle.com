@@ -13,28 +13,28 @@ export default function about() {
         <article className="flex flex-col gap-4">
           <MotionDiv delayOffset={0.4}>
             <p>
-              Hello, I'm Eric Huang and my Chinese is
-              <span className="whitespace-nowrap"> 黄士崧(huáng shì sōng)</span>
-              . I'm an independent <b>Node.JS</b> Full-Stack developer based in
-              Nanning, China.
+              Hello, I'm Zachary DeParle. You can call me Zach. I'm a
+              Mechanical Engineering and Computer Science student at Duke
+              University, and I'm passionate about technology and engineering.
+              Currently, I'm interning as a Manufacturing Mechanical Engineer at
+              Tesla Motors in Fremont, CA.
             </p>
           </MotionDiv>
           <MotionDiv delayOffset={0.5}>
             <p>
-              As a technologies enthusiast, I am highly passionate about
-              building full-stack web applications. And I love learning new
-              technologies, especially elegant code architectures and design
-              patterns. I hope to leverage my technical skills to build valuable
-              apps that can make a difference in people's lives.
+              I have experience in various engineering projects, including
+              designing and 3D printing tools, optimizing production processes,
+              and conducting research in machine learning and materials
+              science. In my free time, I enjoy robotics and have been involved
+              in FIRST and MATE Robotics teams.
             </p>
           </MotionDiv>
           <MotionDiv delayOffset={0.6}>
             <p>
-              Outside of programming, I am also a photographer and filmmaker, I
-              enjoy doing photography and filmmaking and all things visual. I
-              hope my works can aspires people to see the beauty of the world
-              around us. So welcome to subscribe to my social media channels
-              above to see my works!
+              Outside of my engineering pursuits, I'm also a photographer and
+              filmmaker. I'm passionate about capturing the beauty of the world
+              through the lens of my camera. You can check out my photography
+              and filmmaking works on my social media profiles.
             </p>
           </MotionDiv>
         </article>
