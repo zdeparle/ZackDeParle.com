@@ -13,7 +13,7 @@ export default function about() {
         <article className="flex flex-col gap-4">
           <MotionDiv delayOffset={0.4}>
             <p>
-              Hello, I'm Zachary DeParle. You can call me Zach. I'm a
+              Hello, I'm Zachary (Zack) DeParle. I'm a
               Mechanical Engineering and Computer Science student at Duke
               University, and I'm passionate about technology and engineering.
               Currently, I'm interning as a Manufacturing Mechanical Engineer at
