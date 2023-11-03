@@ -25,12 +25,12 @@ import ubuntuIcon from "@/assets/icons/ubuntu.svg";
 import macosIcon from "@/assets/icons/macos.png";
 import vscodeIcon from "@/assets/icons/vscode.png";
 import nodejsIcon from "@/assets/icons/nodejs.png";
-import expressjsIcon from "@/assets/icons/express-js.png"; // Add expressjs icon
 import CIcon from "@/assets/icons/CIcon.png";
-// Rest of the code remains the same
-// Rest of the code remains the same
+import { StaticImageData } from 'next/image';
 
-export default function skills() {
+import expressjsIcon from "@/assets/icons/express-js.png"; // Add expressjs icon
+
+export default function Skills() {
   const data = [
     {
       title: "CAD and Design",
@@ -67,7 +67,6 @@ export default function skills() {
       ],
     },
     {
-      
       title: "Web Development",
       skills: [
         {
@@ -86,10 +85,13 @@ export default function skills() {
           name: "JavaScript",
           icon: javascriptIcon,
         },
+        {
+          name: "Express.js", // Added Express.js
+          icon: expressjsIcon,
+        },
         // Add more web development skills as needed
       ],
     },
-    
     {
       title: "Languages",
       skills: [
@@ -108,12 +110,10 @@ export default function skills() {
         {
           name: "MATLAB",
           icon: matlabIcon,
-        }
-        
+        },
         // Add more programming languages as needed
       ],
     },
-    
     {
       title: "Machine Learning",
       skills: [
@@ -125,19 +125,14 @@ export default function skills() {
           name: "Tensorflow",
           icon: tensorflowIcon,
         },
-        ,
         // Add more machine learning skills as needed
       ],
     },
-   
     // Add more skill categories as needed
   ];
 
   return (
-    <section
-      id="skills"
-      className="flex w-full flex-col items-center text-center"
-    >
+    <section id="skills" className="flex w-full flex-col items-center text-center">
       <MotionDiv>
         <h2 className="mb-4">My Skills</h2>
       </MotionDiv>
@@ -159,7 +154,7 @@ export default function skills() {
   );
 }
 
-function SkillCard({ icon, name }: { icon: string; name: string }) {
+function SkillCard({ icon, name }: { icon: StaticImageData; name: string }) {
   return (
     <div className="group rounded-xl border-none p-5 text-center shadow-none">
       <div className="flex flex-col items-center gap-2">
