@@ -4,7 +4,7 @@ import Image from 'next/image'; // Importing Image component
 import { cn } from "@/lib/utils";
 
 export default function Header() {
-  const links = ["about", "skills", "contact"];
+  const links = ["about", "skills", "projects", "contact"];
   return (
     <>
       <nav className="justify-center py-2 flex w-full select-none pt-6 font-light md:px-28 md:pb-2">
@@ -27,10 +27,13 @@ export default function Header() {
                 key={link}
                 className="cursor-pointer"
                 onClick={() => {
-                  document
-                    .getElementById(link)
-                    ?.scrollIntoView({ behavior: "smooth" });
+                  if (link === "projects") {
+                    window.location.href = "/projects";
+                  } else {
+                    document.getElementById(link)?.scrollIntoView({ behavior: "smooth" });
+                  }
                 }}
+                
               >
                 {link.charAt(0).toUpperCase() + link.slice(1)}
               </span>
