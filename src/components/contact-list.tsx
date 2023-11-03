@@ -1,11 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import {
-  faInstagram,
-  faGithub,
-  faTiktok,
-  faXTwitter,
-} from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import MotionList from "./motion-list";
 import { Button } from "@/components/ui/button";
 import {
@@ -15,45 +9,23 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
+
 type Contact = {
   name: string;
   className: string;
   href: string;
   icon: any;
 };
+
 const contacts: Contact[] = [
   {
-    name: "Email",
-    className: "bg-yellow-500 hover:bg-yellow-600",
-    href: "mailto:erich2s0103@gmail.com",
-    icon: faEnvelope,
-  },
-
-  {
-    name: "X",
-    className: "bg-black hover:bg-gray-800/90",
-    href: "https://twitter.com/erich2s",
-    icon: faXTwitter,
-  },
-  {
-    name: "Github",
-    className: "bg-black hover:bg-gray-800/90",
-    href: "https://github.com/erich2s",
-    icon: faGithub,
-  },
-  {
-    name: "Instagram",
-    className: "bg-pink-500 hover:bg-pink-600",
-    href: "https://instagram.com/eric.h2s/",
-    icon: faInstagram,
-  },
-  {
-    name: "TikTok",
-    className: "bg-black hover:bg-gray-800/90",
-    href: "https://tiktok.com/@eric_h2s",
-    icon: faTiktok,
+    name: "LinkedIn",
+    className: "bg-blue-500 hover:bg-blue-600",
+    href: "https://www.linkedin.com/in/zachary-deparle", // Update with your LinkedIn profile link
+    icon: faLinkedin,
   },
 ];
+
 export default function ContactList({
   delayOffset = 0,
   showWhenInView = true,
@@ -69,7 +41,7 @@ export default function ContactList({
             <TooltipTrigger asChild>
               <Button
                 className={cn(
-                  "flex h-11 w-11 items-center justify-center rounded-full p-3 md:h-12 md:w-12",
+                  "fixed top-4 right-4 z-50 flex h-11 w-11 items-center justify-center rounded-full p-3 md:h-12 md:w-12",
                   contact.className,
                 )}
                 asChild
@@ -78,6 +50,7 @@ export default function ContactList({
                 <a
                   href={contact.href}
                   target="_blank"
+                  rel="noopener noreferrer" // Add rel attribute for security
                   aria-label={contact.name}
                 >
                   <FontAwesomeIcon icon={contact.icon} className="w-fit" />
@@ -93,3 +66,4 @@ export default function ContactList({
     </MotionList>
   );
 }
+
