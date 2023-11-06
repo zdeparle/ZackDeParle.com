@@ -1,46 +1,26 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
 import Header from "@/components/header";
 import BackToTop from "@/components/back-to-top";
+import Head from 'next/head';
+import React from 'react';
 
-const montserrat = Montserrat({ subsets: ["latin"] });
-export const metadata: Metadata = {
-  title: "Zack DeParle | Portfolio",
-  authors: [
-    { name: "Zack DeParle", url: "https://github.com/zdeparle" },
-  ],
-  description: "Zack DeParle's personal portfolio website.",
-  openGraph: {
-    title: "Zack DeParle | Portfolio",
-    description: "Zack DeParle's personal portfolio website.",
-    url: "https://www.ZackDeParle.com",
-    images: [
-      {
-        url: "/photo.jpeg", // Make sure this path points to your new photo in the public folder
-        alt: "Zack DeParle | Portfolio",
-        width: 640,
-        height: 800,
-      },
-    ],
-  },
-  alternates: {
-    canonical: "https://www.ZackDeParle.com",
-  },
+type RootLayoutProps = {
+  children: React.ReactNode; // This defines the type for children
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
-      <body className={montserrat.className}>
-        <Header />
-        <main className="container lg:px-28">{children}</main>
-        <BackToTop />
-      </body>
-    </html>
+    <>
+      <Head>
+        <title>Zack DeParle | Portfolio</title>
+        <meta name="description" content="Zack DeParle's personal portfolio website." />
+        <link rel="canonical" href="https://www.ZackDeParle.com" />
+        <link rel="icon" href="/favicon.ico" />
+        {/* Add any other head elements here */}
+        {/* Fonts should be included here if they are not globally available */}
+      </Head>
+      <Header />
+      <main className="container lg:px-28">{children}</main>
+      <BackToTop />
+    </>
   );
 }
