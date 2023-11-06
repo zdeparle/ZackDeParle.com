@@ -3,11 +3,10 @@
 import React from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
-import Layout from '@/components/layout'; // Adjust the import path if necessary
 
 const Projects = () => {
   return (
-    <Layout>
+    <>
       <Head>
         <title>Projects | Zack DeParle's Portfolio</title>
       </Head>
@@ -33,7 +32,7 @@ const Projects = () => {
         </div>
         {/* Add more projects here */}
       </div>
-    </Layout>
+    </>
   );
 };
 

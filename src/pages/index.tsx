@@ -1,5 +1,4 @@
 // pages/index.tsx
-import Header from "@/components/header"; // Import the Header component
 import Contact from "@/sections/contact";
 import About from "@/sections/about";
 import Hero from "@/sections/hero";
@@ -9,7 +8,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <Header /> {/* Include the Header at the top */}
+      
       <Hero />
       <About />
       <Skills />

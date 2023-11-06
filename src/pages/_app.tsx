@@ -1,11 +1,14 @@
 // pages/_app.tsx
-import '../styles/globals.css'; // Adjust the path to your global styles if necessary
-import Header from "@/components/header";
-
+import '../styles/globals.css'; // Make sure the path is correct
+import Layout from "@/app/layout";
 import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
 
 export default MyApp;
