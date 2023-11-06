@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
-import Layout from './layout'; // Adjust the import path if necessary
+import Layout from '../layout'; // Adjust the import path if necessary
 
 const Projects = () => {
   return (
