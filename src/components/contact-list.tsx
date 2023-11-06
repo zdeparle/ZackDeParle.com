@@ -1,5 +1,4 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import MotionList from "./motion-list";
 import { Button } from "@/components/ui/button";
 import {
@@ -18,12 +17,7 @@ type Contact = {
 };
 
 const contacts: Contact[] = [
-  {
-    name: "LinkedIn",
-    className: "bg-blue-500 hover:bg-blue-600",
-    href: "https://www.linkedin.com/in/zachary-deparle", // Update with your LinkedIn profile link
-    icon: faLinkedin,
-  },
+  // Other contacts can be added here
 ];
 
 export default function ContactList({
@@ -66,4 +60,3 @@ export default function ContactList({
     </MotionList>
   );
 }
-
