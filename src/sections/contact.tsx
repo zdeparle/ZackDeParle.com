@@ -14,6 +14,7 @@ export default function contact() {
         <p>
           If you are interested in working together, please don't hesitate to
           get in touch with me.
+          My Email is Zachary.DeParle@gmail.com!
         </p>
       </MotionDiv>
       <ContactList />

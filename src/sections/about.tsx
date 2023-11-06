@@ -16,8 +16,8 @@ export default function about() {
               Hello, I'm Zachary (Zack) DeParle. I'm a
               Mechanical Engineering and Computer Science student at Duke
               University, and I'm passionate about technology and engineering.
-              Currently, I'm interning as a Manufacturing Mechanical Engineer at
-              Tesla Motors in Fremont, CA.
+              Last summer, I interned at Tesla Motors in Fremont California. The summer before, 
+              I interned at General Motors in Spring Hill Tennessee, and the summer before I interned remotely at Oak Ridge National Laboratory.
             </p>
           </MotionDiv>
           <MotionDiv delayOffset={0.5}>
@@ -31,10 +31,9 @@ export default function about() {
           </MotionDiv>
           <MotionDiv delayOffset={0.6}>
             <p>
-              Outside of my engineering pursuits, I'm also a photographer and
-              filmmaker. I'm passionate about capturing the beauty of the world
-              through the lens of my camera. You can check out my photography
-              and filmmaking works on my social media profiles.
+              I am interested in the intersection between the fields of Mechanical Engineering and Computer Science.
+              I find that studying both fields helps me to understand the full scope of modern technologies and assists me in design projects.
+              Design is my passion in engineering. 
             </p>
           </MotionDiv>
         </article>
