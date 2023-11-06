@@ -1,9 +1,9 @@
-// src/app/projects.tsx
+// pages/projects.tsx
 
 import React from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
-import Layout from '../layout'; // Adjust the import path if necessary
+import Layout from '@/components/layout'; // Adjust the import path if necessary
 
 const Projects = () => {
   return (
@@ -13,6 +13,7 @@ const Projects = () => {
       </Head>
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold my-6">Projects</h1>
+        {/* Project 1 */}
         <div className="mb-8">
           <h2 className="text-3xl font-bold my-4">GearGuru</h2>
           <p className="text-lg">
@@ -25,11 +26,12 @@ const Projects = () => {
             <Image src="/GearGuru2.png" alt="GearGuru Device" width={300} height={200} />
             <Image src="/GearGuru3.png" alt="GearGuru Device" width={300} height={200} />
           </div>
-          {/* Embed CAD design viewer here */}
+          {/* CAD Viewer Placeholder */}
           <div className="cad-viewer">
-            {/* You will need to use an appropriate CAD viewer component or iframe depending on how you want to integrate the CAD design */}
+            {/* Integration of CAD viewer will go here */}
           </div>
         </div>
+        {/* Add more projects here */}
       </div>
     </Layout>
   );

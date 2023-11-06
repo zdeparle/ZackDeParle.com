@@ -1,10 +1,9 @@
 const nextConfig = {
-  output: "export",
   images: {
     unoptimized: true,
   },
-  // Add this to set a base URL for metadata
   publicRuntimeConfig: {
+    // Make sure you are actually using `metadataBase` in your application.
     metadataBase: 'http://localhost:3000',
   },
 };
