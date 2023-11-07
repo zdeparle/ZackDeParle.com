@@ -1,5 +1,5 @@
 // pages/_app.tsx
-import '../styles/globals.css'; // Make sure the path is correct
+import '../styles/globals.css';
 import Layout from "@/app/layout";
 import type { AppProps } from 'next/app';
 

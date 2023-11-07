@@ -1,10 +1,8 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
   images: {
     unoptimized: true,
-  },
-  publicRuntimeConfig: {
-    // Make sure you are actually using `metadataBase` in your application.
-    metadataBase: 'http://localhost:3000',
   },
 };
 

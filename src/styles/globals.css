@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+  :src{
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
@@ -74,18 +74,10 @@
     @apply bg-background text-foreground;
   }
 }
-
-/* Remove the @font-face for GoldenSignature */
-
-/* Add a CSS class to apply the background image */
-.signature-image {
-  background-image: url('/images/signature-image.png'); /* Adjust the path accordingly */
-  background-size: contain; /* Adjust as needed */
-  width: 200px; /* Set the width and height based on your image size */
-  height: 50px;
-  /* Add other styling as needed */
+@font-face {
+  font-family: "GoldenSignature";
+  src: url("/GoldenSignature.otf");
 }
-
 h1 {
   font-size: 2rem;
   font-weight: 700;

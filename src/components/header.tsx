@@ -14,8 +14,8 @@ export default function Header() {
   <Image
     src="signature-image.png"
     alt="Zack DeParle"
-    width={100}
-    height={50}
+    width={50}
+    height={25}
     objectFit="contain"
   />
 </Link>
