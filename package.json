@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build:css": "npx postcss src/styles/globals.css -o src/styles/globals.css",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -35,6 +34,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
     "@types/next": "^9.0.0",
     "postcss": "^8.4.31",
     "postcss-cli": "^10.1.0",
