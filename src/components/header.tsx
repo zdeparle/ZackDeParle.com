@@ -12,10 +12,10 @@ export default function Header() {
           <Link href="/" legacyBehavior>
             <a>
               <Image
-                src="/signature-image.png"
+                src="/RectangleZLogo.png"
                 alt="Zack DeParle"
-                width={50}
-                height={25}
+                width={100}
+                height={45}
                 objectFit="contain"
               />
             </a>
