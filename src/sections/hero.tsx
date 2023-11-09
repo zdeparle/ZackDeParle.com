@@ -26,7 +26,7 @@ export default function hero() {
         <MotionDiv delayOffset={0.8}>Designer</MotionDiv>
       </h1>
       <h1>
-        <MotionDiv delayOffset={1}>Engineer</MotionDiv>
+        <MotionDiv delayOffset={1}>Creator</MotionDiv>
       </h1>
       <h1>
         <MotionDiv delayOffset={1.2}>Innovator</MotionDiv>
