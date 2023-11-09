@@ -29,7 +29,7 @@ export default function hero() {
         <MotionDiv delayOffset={1}>Engineer</MotionDiv>
       </h1>
       <h1>
-        <MotionDiv delayOffset={1.2}>Artist</MotionDiv>
+        <MotionDiv delayOffset={1.2}>Innovator</MotionDiv>
       </h1>
       <div className="my-12 flex w-full flex-col gap-2 text-center lg:w-[50%]">
         <MotionDiv delayOffset={1.2}>
