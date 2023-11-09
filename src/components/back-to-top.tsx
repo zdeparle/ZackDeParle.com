@@ -20,6 +20,7 @@ export default function BackToTop() {
     },
     visible: {
       x: 0,
+      
       y: 0,
       opacity: 1,
     },
