@@ -36,8 +36,8 @@ export default function Header() {
           ))}
           {/* Resume Download Button */}
           <a
-            href="/path/to/Zack_DeParle_Resume.pdf" // Update this path to the actual path of your resume
-            download="Zack_DeParle_Resume.pdf"
+            href="/Zachary_DeParle_Resume_2023.pdf" // Update this path to the actual path of your resume
+            download="Zachary_DeParle_Resume_2023.pdf"
             className="cursor-pointer hover:underline text-white bg-blue-600 px-4 py-2 rounded-md shadow-lg hover:bg-blue-700"
           >
             Resume
