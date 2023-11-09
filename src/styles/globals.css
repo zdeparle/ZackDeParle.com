@@ -1,7 +1,7 @@
-/* Tailwind CSS Base */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 /* Colors */
 @layer base {
@@ -94,9 +94,7 @@
   font-family: "GoldenSignature";
   src: url("/GoldenSignature.otf");
 }
-p {
-  @apply text-base leading-relaxed mb-8;
-}
+
 
 /* Headings */
 h1 {
