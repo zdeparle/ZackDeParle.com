@@ -23,7 +23,7 @@ export default function Header() {
         </div>
         <div className="nav-links flex gap-x-8 text-xs md:text-base">
           {links.map((link) => (
-            <Link key={link} href={`/${link === "experiences" ? "experiences" : `#${link}`}`} legacyBehavior>
+            <Link key={link} href={`/${link === "experiences" ? "experiences" : `${link}`}`} legacyBehavior>
               <a className="cursor-pointer" onClick={(e) => {
                 if (link !== "projects" && link !== "experiences") {
                   e.preventDefault();
