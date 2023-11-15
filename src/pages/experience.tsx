@@ -57,7 +57,7 @@ const ExperiencePage = () => {
         </MotionDiv>
         
         {/* National Institutes of Health Experience */}
-        <MotionDiv delayOffset={0.8}>
+        <MotionDiv delayOffset={0.2}>
 
         <section className={styles.experienceSection}>
           {/* Replace with actual image source */}
@@ -74,7 +74,7 @@ const ExperiencePage = () => {
         </MotionDiv>
         
         {/* Gall Group Laboratory Experience */}
-        <MotionDiv delayOffset={1}>
+        <MotionDiv delayOffset={0.4}>
 
         <section className={styles.experienceSection}>
           {/* Replace with actual image source */}
