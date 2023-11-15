@@ -42,7 +42,7 @@ export default function Header() {
           ))}
           {/* Resume Download Button */}
           <a
-            href="/Zachary_DeParle_Resume_2023.pdf"
+            href="/Zacha3ry_DeParle_Resume_2023.pdf"
             download="Zachary_DeParle_Resume_2023.pdf"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md shadow-lg"
           >

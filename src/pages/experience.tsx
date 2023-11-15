@@ -13,7 +13,7 @@ const ExperiencePage = () => {
         {/* Tesla Motors Experience */}
         <section className={styles.experienceSection}>
           <div className={styles.titleContainer}>
-            <Image src="/assets/teslalogoblack.png" alt="Tesla Logo" width={100} height={50} />
+            <Image src="/teslalogo.png" alt="Tesla Logo" width={100} height={50} />
             <h2>Tesla Motors, Manufacturing Mechanical Engineer Intern</h2>
           </div>
           <p>Fremont, CA, May – August 2023</p>
@@ -25,7 +25,10 @@ const ExperiencePage = () => {
         {/* General Motors Experience */}
         <section className={styles.experienceSection}>
           {/* Replace with actual image source */}
+          <div className={styles.titleContainer}>
+          <Image src="/gmlogo.webp" alt="GM Logo" width={100} height={50} />
           <h2>General Motors, Manufacturing Mechanical Engineer Intern</h2>
+          </div>
           <p>Spring Hill, TN, May – August 2022</p>
           <p>
             My tenure at General Motors was marked by significant contributions to the Cadillac Lyriq EV. I engineered a protective cockpit installation shield, collaborating with interdisciplinary teams, and successfully prevented annual damage costs estimated at $1.5 million. This involved using complex CAD software to design and test the shield. Additionally, I developed production line procedures that not only yielded a 1% boost in plant electrical efficiency but also played a pivotal role in reducing production defects, marking a step forward in manufacturing optimization.
@@ -34,8 +37,11 @@ const ExperiencePage = () => {
         
         {/* Oak Ridge National Laboratory Experience */}
         <section className={styles.experienceSection}>
+        <div className={styles.titleContainer}>
+          <Image src="/ornllogo.jpeg" alt="ORNL Logo" width={100} height={50} />
           {/* Replace with actual image source */}
           <h2>Oak Ridge National Laboratory (ORNL), Research Intern</h2>
+          </div>
           <p>Oak Ridge, TN, June – August 2021</p>
           <p>
             At ORNL, I delved into the cutting-edge field of machine learning, developing models to extract chemical properties data from text sequences. This required a deep understanding of data science and machine learning methodologies, and I frequently utilized Python and other data analysis tools. Additionally, I was involved in researching the prediction of chemical properties of polymers using Summit, the world's leading Quantum supercomputer. This work demanded a high level of technical skill and innovative thinking in computational modeling.
