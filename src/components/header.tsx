@@ -5,7 +5,14 @@ import Image from 'next/image';
 import linkedinLogo from './linkedin-logo.png'; 
 
 export default function Header() {
-  const links = ["about", "skills", "projects", "experience", "contact"];
+  const links = [
+    
+    { name: 'About', path: '/#about' },
+    { name: 'Skills', path: '/#skills' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Experience', path: '/experience' },
+    { name: 'Contact', path: '/#contact' },
+  ];
 
   return (
     <nav className="flex w-full justify-center py-2 select-none pt-6 font-light md:px-28 md:pb-2">
@@ -27,9 +34,9 @@ export default function Header() {
         {/* Navigation Links */}
         <div className="nav-links flex gap-x-8 text-xs md:text-base">
           {links.map((link) => (
-            <Link key={link} href={`/#${link}`} legacyBehavior>
+            <Link key={link.name} href={link.path} legacyBehavior>
               <a className="cursor-pointer hover:text-blue-500">
-                {link.charAt(0).toUpperCase() + link.slice(1)}
+                {link.name.charAt(0).toUpperCase() + link.name.slice(1)}
               </a>
             </Link>
           ))}
