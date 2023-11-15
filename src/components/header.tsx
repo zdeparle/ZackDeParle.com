@@ -40,22 +40,15 @@ export default function Header() {
               </a>
             </Link>
           ))}
-          {/* Resume Download Button */}
-          <a
-            href="/Zacha3ry_DeParle_Resume_2023.pdf"
-            download="Zachary_DeParle_Resume_2023.pdf"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md shadow-lg"
-          >
-            Resume
-          </a>
+          
           {/* LinkedIn Button */}
           <a href="https://www.linkedin.com/in/zachary-deparle" target="_blank" rel="noopener noreferrer"
-             className="block relative h-10 w-10"> {/* Adjust the height and width as needed */}
+             className="flex items-center justify-center h-5 w-5"> {/* Use flexbox to center the image */}
             <Image
               src={linkedinLogo}
               alt="LinkedIn"
-              layout="fill"
-              objectFit="contain"
+              width={40} // Explicitly set width
+              height={40} // Explicitly set height
             />
           </a>
         </div>

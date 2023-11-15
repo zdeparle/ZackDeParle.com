@@ -51,7 +51,11 @@ const ExperiencePage = () => {
         {/* National Institutes of Health Experience */}
         <section className={styles.experienceSection}>
           {/* Replace with actual image source */}
+          <div className={styles.titleContainer}>
+          <Image src="/nihlogo.png" alt="NIH Logo" width={100} height={50} />
+         
           <h2>National Institutes of Health (NIH), Research Intern</h2>
+          </div>
           <p>Bethesda, MD, January 2018 – February 2021</p>
           <p>
             My experience at NIH was both challenging and fulfilling, as I utilized CAD and 3D printing to develop a functional electrical stimulation exoskeleton. This exoskeleton aimed to improve the mobility and gait of children with cerebral palsy. The project required intricate CAD modeling and an adept understanding of 3D printing technologies. Through this, I honed my skills in designing medical devices that are both effective and empathetic to the user's needs.
@@ -61,7 +65,11 @@ const ExperiencePage = () => {
         {/* Gall Group Laboratory Experience */}
         <section className={styles.experienceSection}>
           {/* Replace with actual image source */}
+          <div className={styles.titleContainer}>
+          <Image src="/prattlogo.jpeg" alt="Pratt Logo" width={100} height={50} />
+         
           <h2>Gall Group Laboratory, Research Assistant</h2>
+          </div>
           <p>Durham, NC, March 2021 – Present</p>
           <p>
             At the Gall Group Laboratory, I applied advanced CAD modeling and 3D printing techniques to create various lattice structures for "dog-bone" specimens. This involved a meticulous approach to designing and testing these structures using CAD software and ensuring they met the required specifications. Additionally, I conducted extensive stress-strain testing and utilized machine learning algorithms in MATLAB to process complex data sets, forecasting the durability and functional longevity of these lattice structures for cartilage implant applications. My work here combined mechanical engineering principles with innovative data analysis techniques.
