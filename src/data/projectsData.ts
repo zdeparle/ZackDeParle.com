@@ -14,11 +14,12 @@ export interface Project {
   export const projectsData: Project[] = [
     {
       id: 1,
-      title: 'Project One with Autodesk CAD',
-      thumbnail: '/path/to/thumbnail1.jpg',
+      title: 'GearGuroo: Bicycle Gear Recommendation System',
+      thumbnail: '../GearGurooThumbnail.jpg',
       images: [
-        '/path/to/image1.jpg',
-        '/path/to/image2.jpg',
+        '../GearGuru1.png',
+        '../GearGuru2.png',
+        '../GearGuru3.png',
         // ... more images
       ],
       description: 'Short description of Project One',
