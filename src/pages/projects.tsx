@@ -83,11 +83,12 @@ const Projects = () => {
               {/* CAD Viewer - make sure this iframe only renders when there is a CAD link available */}
               {activeProject.cadLink && (
                 <iframe
-                  src={activeProject.cadLink}
-                  frameBorder="0"
-                  allowFullScreen
-                  className={styles.cadViewer} // Apply styling through this class
-                ></iframe>
+                src="https://myhub.autodesk360.com/ue2a9dcff/shares/public/SH35dfcQT936092f0e43c2ee0711895f694d?mode=embed"
+                width="100%"  // Using 100% to make it responsive to the container width
+                height="480"  // You can adjust this as needed, or make it responsive
+                allowFullScreen
+                frameBorder="0"
+              ></iframe>
               )}
               {/* Detailed Description */}
               <div dangerouslySetInnerHTML={{ __html: activeProject.detailedDescription }} />
