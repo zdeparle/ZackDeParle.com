@@ -11,11 +11,7 @@ const Contact = () => {
       </MotionDiv>
 
       <article className="flex flex-col items-center gap-4">
-        <MotionDiv delayOffset={0.4}>
-          <p>
-            I'm available for projects and job opportunities. If you're interested in my work or want to chat, feel free to reach out.
-          </p>
-        </MotionDiv>
+        
 
         {/* Email Button */}
         <MotionDiv delayOffset={0.5}>
