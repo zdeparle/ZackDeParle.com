@@ -111,6 +111,43 @@ h3 {
   font-size: 1.25rem;
   font-weight: 700;
 }
+.email-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: var(--primary); /* Using primary color variable */
+  color: var(--primary-foreground); /* Using primary foreground color variable */
+  text-align: center;
+  text-decoration: none;
+  border-radius: var(--radius); /* Using radius variable */
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.email-button:hover {
+  transform: translateY(-2px); /* Slight lift effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding a subtle shadow on hover */
+}
+.contact-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: var(--primary); /* Using primary color variable */
+  color: var(--primary-foreground); /* Using primary foreground color variable */
+  text-align: center;
+  text-decoration: none;
+  border-radius: var(--radius); /* Using radius variable */
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  transform: translateY(-2px); /* Slight lift effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding a subtle shadow on hover */
+}
+
 
 /* Media Queries */
 @media (min-width: 768px) {

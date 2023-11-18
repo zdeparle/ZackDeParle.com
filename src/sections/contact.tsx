@@ -1,23 +1,38 @@
-import ContactList from "@/components/contact-list";
 import MotionDiv from "@/components/motion-div";
 
-export default function contact() {
+const Contact = () => {
   return (
     <section
-      className="my-4 mb-28 flex flex-col items-center gap-5 text-center md:mt-8"
       id="contact"
+      className="mx-auto my-16 flex flex-col items-center justify-center gap-4 px-2 md:my-20 md:max-w-full"
     >
-      <MotionDiv>
-        <h2>Contact</h2>
+      <MotionDiv delayOffset={0.2}>
+        <h2 className="mb-3 w-full text-center md:mb-6">Contact Me</h2>
       </MotionDiv>
-      <MotionDiv>
-        <p>
-          If you are interested in working together, please don't hesitate to
-          get in touch with me.
-          My Email is Zachary.DeParle@gmail.com!
-        </p>
-      </MotionDiv>
-      <ContactList />
+
+      <article className="flex flex-col items-center gap-4">
+        <MotionDiv delayOffset={0.4}>
+          <p>
+            I'm available for projects and job opportunities. If you're interested in my work or want to chat, feel free to reach out.
+          </p>
+        </MotionDiv>
+
+        {/* Email Button */}
+        <MotionDiv delayOffset={0.5}>
+          <a href="mailto:zachary.deparle@gmail.com" className="contact-button">
+            Email Me
+          </a>
+        </MotionDiv>
+
+        {/* LinkedIn Button */}
+        <MotionDiv delayOffset={0.6}>
+          <a href="https://www.linkedin.com/in/zachary-deparle" target="_blank" rel="noopener noreferrer" className="contact-button">
+            LinkedIn Profile
+          </a>
+        </MotionDiv>
+      </article>
     </section>
   );
-}
+};
+
+export default Contact;
