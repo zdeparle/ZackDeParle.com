@@ -1,25 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from '../styles/projects.module.css';
-import { Project, projectsData } from '../data/projectsData'; // Import the Project interface and projects data
+import { Project, projectsData } from '../data/projectsData';
 
 const Projects = () => {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const toggleProject = (project: Project) => {
     setActiveProject(activeProject === project ? null : project);
+    setCurrentImageIndex(0); // Reset image index when a project is opened or closed
   };
 
-  // This function will be called when the backdrop is clicked
-  const handleBackdropClick = (event: React.MouseEvent) => {
-    // Prevent clicks from the modal content from reaching the backdrop
+  useEffect(() => {
+    const timer = setInterval(() => {
+      if (activeProject) {
+        setCurrentImageIndex((prevIndex) => 
+          (prevIndex + 1) % activeProject.images.length
+        );
+      }
+    }, 5000); // Change image every 5 seconds
+
+    return () => clearInterval(timer);
+  }, [activeProject]);
+
+  const changeImage = (direction: 'next' | 'prev') => {
+    if (activeProject) { // Ensure activeProject is not null before accessing its properties
+      setCurrentImageIndex((prevIndex) => {
+        const newIndex = direction === 'next' ? prevIndex + 1 : prevIndex - 1;
+        return (newIndex + activeProject.images.length) % activeProject.images.length;
+      });
+    }
+  };
+
+  const handleBackdropClick = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     event.stopPropagation();
-    setActiveProject(null); // Close the modal
+    setActiveProject(null);
   };
 
-  // Animation variants for Framer Motion
   const variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
@@ -44,8 +64,8 @@ const Projects = () => {
             <Image
               src={project.thumbnail}
               alt={`${project.title} Thumbnail`}
-              width={300} // Set desired width
-              height={200} // Set desired height
+              width={300}
+              height={200}
               layout="responsive"
             />
             <h2>{project.title}</h2>
@@ -60,37 +80,40 @@ const Projects = () => {
             initial="hidden"
             animate="visible"
             exit="hidden"
-            onClick={handleBackdropClick} // This handles clicking outside the modal content
+            onClick={handleBackdropClick}
           >
             <div
               className={styles.modalContent}
-              onClick={(e) => e.stopPropagation()} // Prevent clicks inside the modal content from closing it
+              onClick={(e) => e.stopPropagation()}
             >
               <button onClick={() => setActiveProject(null)}>Close</button>
               <h2>{activeProject.title}</h2>
               <p>{activeProject.description}</p>
-              {/* Render all images */}
-              {activeProject.images.map((image, index) => (
-                <Image
-                  key={index}
-                  src={image}
-                  alt={`${activeProject.title} Image ${index + 1}`}
-                  width={800} // Actual width of the image
-                  height={600} // Actual height of the image, maintaining the aspect ratio
-                  layout="responsive"
-                />
-              ))}
-              {/* CAD Viewer - make sure this iframe only renders when there is a CAD link available */}
+
+              {/* CAD Viewer Section */}
+              <h3>CAD View</h3>
               {activeProject.cadLink && (
-                <iframe
-                src="https://myhub.autodesk360.com/ue2a9dcff/shares/public/SH35dfcQT936092f0e43c2ee0711895f694d?mode=embed"
-                width="100%"  // Using 100% to make it responsive to the container width
-                height="480"  // You can adjust this as needed, or make it responsive
-                allowFullScreen
-                frameBorder="0"
-              ></iframe>
+                <div className={styles.cadViewer} dangerouslySetInnerHTML={{ __html: activeProject.cadLink }} />
               )}
-              {/* Detailed Description */}
+
+              {/* Image Carousel Section */}
+              <h3>Gallery</h3>
+              <div className={styles.carouselContainer}>
+                <button className={styles.carouselButton} onClick={() => changeImage("prev")}>{"<"}</button>
+                <div className={styles.imageContainer}>
+                  <Image
+                    src={activeProject.images[currentImageIndex]}
+                    alt={`${activeProject.title} Image ${currentImageIndex + 1}`}
+                    width={800}
+                    height={600}
+                    layout="responsive"
+                  />
+                </div>
+                <button className={styles.carouselButton} onClick={() => changeImage("next")}>{">"}</button>
+              </div>
+
+              {/* Detailed Description Section */}
+              <h3>Project Details</h3>
               <div dangerouslySetInnerHTML={{ __html: activeProject.detailedDescription }} />
             </div>
           </motion.div>
