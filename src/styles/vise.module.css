@@ -28,4 +28,44 @@
     margin: 1rem auto; /* Centering and margin */
     border: none; /* Removes default border */
   }
+  /* vise.module.css */
+.swiper-container {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 20px auto;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  /* ... existing styles ... */
+
+.sectionTitle {
+    font-size: 1.5rem;
+    margin: 2rem 0;
+    text-align: center;
+  }
+  
+  .swiperContainer {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .swiperImage {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  
+  /* Add custom styles for Swiper navigation buttons if needed */
+  
+  
   
