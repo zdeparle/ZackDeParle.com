@@ -150,6 +150,27 @@ h3 {
 
 
 /* Media Queries */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.7rem;
+  }
+  .nav-links > * {
+    @apply relative;
+  }
+  .nav-links > *::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1.25px;
+    background: black;
+    transition: width 0.2s ease-out;
+  }
+  .nav-links > *:hover::after {
+    width: 100%;
+  }
+}
 /* Media Queries for smaller screens */
 @media (max-width: 640px) { /* Tailwind's 'sm' breakpoint */
   .nav-links {
