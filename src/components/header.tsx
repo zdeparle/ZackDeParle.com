@@ -18,10 +18,10 @@ export default function Header() {
         <Link href="/" passHref>
           <div className="text-5xl drop-shadow-2xl cursor-pointer">
             <Image
-              src="/RectangleZLogo.png"
+              src="/newzlogo.png"
               alt="Zack DeParle"
-              width={100}
-              height={45}
+              width={40}
+              height={40}
               objectFit="contain"
             />
           </div>

@@ -15,7 +15,7 @@ export const projectsData: Project[] = [
   {
     id: 'vise',
     title: 'Vise: Machine Shop Project',
-    thumbnail: '/vise/thumbnail.jpg',
+    thumbnail: '/vise/1.jpg',
   },
   // ... other projects
 ];
