@@ -150,24 +150,37 @@ h3 {
 
 
 /* Media Queries */
-@media (min-width: 768px) {
-  h1 {
-    font-size: 2.7rem;
+/* Media Queries for smaller screens */
+@media (max-width: 640px) { /* Tailwind's 'sm' breakpoint */
+  .nav-links {
+    @apply flex-col items-center;
+  }
+
+  .nav-links > * {
+    @apply w-full text-center;
   }
   .nav-links > * {
-    @apply relative;
+    @apply w-full text-center relative underline; /* Apply underline to all nav link children */
   }
-  .nav-links > *::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 1.25px;
-    background: black;
-    transition: width 0.2s ease-out;
+  
+
+  /* Optionally, adjust the padding and margin for the nav items */
+  .nav-links > * {
+    @apply py-2; /* Adds vertical padding */
+    @apply my-1; /* Adds vertical margin */
   }
-  .nav-links > *:hover::after {
-    width: 100%;
+
+  .header-logo {
+    @apply w-full; /* Make the logo take the full width of the container */
+    @apply px-4; /* Add some horizontal padding */
+    @apply py-2; /* Add some vertical padding */
+    /* Any additional styles for the logo on narrow screens */
+  }
+
+  .nav-menu {
+    @apply flex-col; /* Stack the navigation items vertically */
+    @apply items-center; /* Center the items vertically */
+    @apply py-2; /* Add some vertical padding between items */
+    /* Any additional styles for the navigation menu on narrow screens */
   }
 }
