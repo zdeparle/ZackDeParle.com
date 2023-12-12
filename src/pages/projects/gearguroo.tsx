@@ -113,37 +113,73 @@ const GearGuroo = () => {
   ];
   
   return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      className={styles.container}
-    >
+    <motion.div initial="initial" animate="animate" exit="exit" className={styles.container}>
       <Head>
         <title>GearGuroo: Bicycle Gear Recommendation System</title>
       </Head>
       <main className={styles.mainContent}>
+        {/* Team Image */}
         <motion.div variants={fadeInUp}>
-          <Image
-            src="/gearguroo/team.png"
-            alt="Team"
-            width={800}
-            height={600}
-            layout="responsive"
-            className={styles.teamImage}
-          />
+          <Image src="/gearguroo/team.png" alt="Team" width={800} height={600} layout="responsive" className={styles.teamImage} />
         </motion.div>
 
+        {/* Introduction */}
         <motion.div variants={fadeInUp}>
-          <h1 className={styles.title}>GearGuroo: Bicycle Gear Recommendation System</h1>
+          <h1 className={styles.title}>GearGuroo: Enhancing Cycling with Smart Gear Recommendations</h1>
+          <p className={styles.description}>
+          As a passionate cyclist and technologist, I embarked on an ambitious project - GearGuroo. This innovative bicycle gear recommendation system was designed to elevate the cycling experience by providing dynamic gear shift suggestions. Our goal was to make cycling more efficient and enjoyable, especially for novice cyclists who may struggle with optimal gear selection.
+
+{/* Include full content from each section */}
+          </p>
         </motion.div>
 
-        <motion.div variants={fadeInUp} className={styles.description}>
-          <p>GearGuroo aids cyclists by suggesting gear changes through a display screen based on their speed, terrain, and ride difficulty preferences. It offers visual and audio cues for optimal gear selection, thereby enhancing the cycling experience.</p>
-          <p>This project was developed by a team skilled in mechanical, electrical engineering, and computer science. We designed a system that calculates gear suggestions using data from speed and terrain, processed by machine learning algorithms. The incline of the ride is measured by an accelerometer, and gear suggestions are extrapolated from the RPM of the back tire, detected by a Hall Effect sensor.</p>
-          <p>Our integrated sensors, the Hall effect sensor, and accelerometer, placed within the bike's frame, track speed and incline, while our custom-designed display screen using Nextion software provides a user-friendly interface for real-time gear change suggestions.</p>
+        {/* Concept and Design */}
+        <motion.div variants={fadeInUp}>
+          <h2 className={styles.sectionTitle}>Concept and Design</h2>
+          <p className={styles.description}>
+          The idea behind GearGuroo was to create a system that could intelligently suggest gear changes based on various factors such as speed, terrain, and the cyclist's preference for ride difficulty. To achieve this, we integrated a combination of mechanical design, electronic engineering, and software development.{/* Continue with the description */}
+          </p>
         </motion.div>
 
+        {/* Technical Implementation */}
+        <motion.div variants={fadeInUp}>
+          <h2 className={styles.sectionTitle}>Technical Implementation</h2>
+          <p className={styles.description}>
+          One of the core challenges was to design and implement a system that seamlessly combined hardware and software. We equipped the bicycle with sensors - a Hall effect sensor and an accelerometer - which were meticulously placed within the bike's frame. These sensors played a pivotal role in tracking speed and incline.
+          A significant aspect of GearGuroo was the development of a user-friendly interface. We utilized Nextion software to design a custom display screen that presented gear suggestions in real-time. This feature was particularly beneficial for ensuring the system's accessibility and ease of use.
+          {/* Continue with the description */}
+          </p>
+        </motion.div>
+
+        {/* Software Development */}
+        <motion.div variants={fadeInUp}>
+          <h2 className={styles.sectionTitle}>Software Development</h2>
+          <p className={styles.description}>
+          The heart of GearGuroo's functionality lay in its ability to process data and provide intelligent suggestions. We employed machine learning algorithms to analyze the data collected from the bike's sensors. This analysis was crucial for making accurate gear change recommendations, tailored to the specific conditions and rider's preferences.
+          {/* Continue with the description */}
+          </p>
+        </motion.div>
+
+        {/* Project Skills and Tools */}
+        <motion.div variants={fadeInUp}>
+          <h2 className={styles.skillsTitle}>Project Skills and Tools</h2>
+          <div className={styles.skillsContainer}>
+          GearGuroo was not only about integrating different technologies but also about applying a diverse set of skills. We utilized various software and tools, including Autodesk Fusion 360 and Siemens NX for design, along with programming in C for software development. This multidisciplinary approach was key to the project's success.
+
+
+            {/* Skills Utilized in This Project */}
+            {/* Include SkillCard components as before */}
+          </div>
+        </motion.div>
+
+        {/* Conclusion */}
+        <motion.div variants={fadeInUp}>
+          <h2 className={styles.sectionTitle}>Conclusion</h2>
+          <p className={styles.description}>
+          Completing GearGuroo was a fulfilling journey that combined my passion for cycling with my interest in technology. This project not only enhanced my technical skills but also gave me valuable insights into the importance of interdisciplinary collaboration in technology development.
+          {/* Include the conclusion content */}
+          </p>
+        </motion.div>
         <motion.div variants={fadeInUp}>
           <h2 className={styles.sectionTitle}>Electronics</h2>
           <Swiper
