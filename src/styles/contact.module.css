@@ -1,16 +1,15 @@
-.emailButton {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007bff; /* Example blue color */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  .emailButton:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    color: white;
-  }
-  
+.contactButton {
+  font-size: 3rem; /* Increased size for the emoji */
+  display: inline-block;
+  padding: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s;
+}
+
+.contactButton:hover {
+  transform: scale(1.1);
+}

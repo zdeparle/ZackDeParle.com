@@ -14,8 +14,10 @@ export default function Home() {
       <Skills />
       {/* Update this section for the projects link */}
       <section className="text-center my-8">
-        <Link href="/projects" legacyBehavior>
-          <a className="btn">View Projects</a>
+      <Link href="/projects"legacyBehavior>
+          <a className="largeEmojiButton" aria-label="View Projects">
+            🏗️ {"Projects"}
+          </a>
         </Link>
       </section>
       <Contact />

@@ -124,6 +124,17 @@ h3 {
   transition: background-color 0.3s ease, transform 0.3s ease;
   cursor: pointer;
 }
+.largeEmojiButton {
+  font-size: 4rem; /* Large size for the emoji */
+  display: inline-block; /* To apply padding and centering */
+  padding: 20px; /* Space around the emoji */
+  border: none; /* Optional: remove if you want a border */
+  background: transparent; /* Ensures no background color */
+  cursor: pointer; /* Changes the cursor to signify a clickable element */
+  /* Additional styling can be applied as needed */
+  text-decoration: none; /* Removes underline from links */
+  color: inherit; /* Keeps the emoji color consistent with other text */
+}
 
 .email-button:hover {
   transform: translateY(-2px); /* Slight lift effect on hover */
