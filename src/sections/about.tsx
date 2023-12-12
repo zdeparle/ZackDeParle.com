@@ -25,15 +25,20 @@ export default function about() {
               I have experience in various engineering projects, including
               designing and 3D printing tools, optimizing production processes,
               and conducting research in machine learning and materials
-              science. In my free time, I enjoy robotics and have been involved
-              in FIRST and MATE Robotics teams.
+              science. 
             </p>
           </MotionDiv>
           <MotionDiv delayOffset={0.6}>
             <p>
-              I am interested in the intersection between the fields of Mechanical Engineering and Computer Science.
-              I find that studying both fields helps me to understand the full scope of modern technologies and assists me in design projects.
-              Design is my passion in engineering. 
+              I began my engineering journey in high school, where I led our Robotics team, competing in FIRST and MATE competitions. 
+              When our lab's 3D printer broke I built my own and taught myself Fusion360. I used this knowledge both to help our robotics team by designing and producing custom parts, but also to assist research at the National Institutes of Health in my free time after school, working in a Cerebral Palsy rehabilitation lab under Thomas Bulea Ph.D. 
+              </p> 
+          </MotionDiv>
+          <MotionDiv delayOffset={0.7}>
+            <p>
+              Design is my passion in engineering. To me, what makes engineeering such an intriguing field is that engineers get to make things that help people and solve problems. 
+              Solving problems is rewarding, and I love the feeling of accomplishment that comes with designing a solution to a problem.
+              I find that studying both Mechanical Engineering and Computer Science helps me to understand the full scope of modern technologies and assists me in design projects.
             </p>
           </MotionDiv>
         </article>
