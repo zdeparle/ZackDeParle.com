@@ -23,13 +23,13 @@ export default function hero() {
         </MotionDiv>
       </div>
       <h1>
-        <MotionDiv delayOffset={0.8}>Designer</MotionDiv>
+        <MotionDiv delayOffset={0.8}>🎨Designer🎨</MotionDiv>
       </h1>
       <h1>
-        <MotionDiv delayOffset={1}>Creator</MotionDiv>
+        <MotionDiv delayOffset={1}>🔨Builder🔨</MotionDiv>
       </h1>
       <h1>
-        <MotionDiv delayOffset={1.2}>Innovator</MotionDiv>
+        <MotionDiv delayOffset={1.2}>💡Innovator💡</MotionDiv>
       </h1>
       <div className="my-12 flex w-full flex-col gap-2 text-center lg:w-[50%]">
         <MotionDiv delayOffset={1.2}>

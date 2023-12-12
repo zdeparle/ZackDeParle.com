@@ -1,71 +1,91 @@
 /* vise.module.css */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-  }
-  
-  .mainContent {
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  .title {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .description {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    text-align: justify;
-  }
-  .cadIframe {
-    width: 100%; /* Responsive width */
-    max-width: 640px; /* Maximum width */
-    height: 480px; /* Fixed height */
-    margin: 1rem auto; /* Centering and margin */
-    border: none; /* Removes default border */
-  }
-  /* vise.module.css */
-.swiper-container {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    margin: 20px auto;
-  }
-  
-  .swiper-slide {
-    text-align: center;
-  }
-  
-  .swiper-slide img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-  /* ... existing styles ... */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.mainContent {
+  width: 100%;
+  max-width: 1200px; /* Adjust as needed for your layout */
+}
+
+.teamImage {
+  border-radius: 8px; /* Optional: if you want rounded corners */
+  margin-bottom: 20px;
+}
+
+.title {
+  margin: 20px 0;
+  font-size: 2rem; /* Large font size for the title */
+  text-align: center;
+}
+
+.description {
+  margin-bottom: 20px;
+  text-align: center;
+}
 
 .sectionTitle {
-    font-size: 1.5rem;
-    margin: 2rem 0;
-    text-align: center;
+  font-size: 1.5rem;
+  margin: 40px 0 20px;
+  text-align: center;
+}
+
+/* Swiper Container */
+.swiperContainer {
+  width: 100%;
+  max-width: 600px; /* Adjust as needed for your design */
+  height: 400px; /* Adjust based on the desired height */
+  margin: auto;
+  position: relative; /* Needed for caption positioning */
+}
+
+.swiperSlide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Full height of the container */
+}
+
+.swiperSlide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ensures the image is scaled properly */
+}
+
+.caption {
+  position: absolute;
+  bottom: 10px; /* Adjust the distance from the bottom of the swiper */
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white; /* Text color */
+  padding: 5px;
+  font-size: 0.9rem;
+}
+
+.cadIframe {
+  border: none; /* Removes the default border around iframes */
+  margin-top: 20px;
+  width: 100%; /* Ensures the iframe is responsive */
+  height: 500px; /* Adjust height as needed */
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 768px) {
+  .mainContent {
+    padding: 10px;
   }
-  
-  .swiperContainer {
-    width: 100%;
-    max-width: 600px;
-    margin: auto;
+
+  .title, .sectionTitle {
+    font-size: 1.25rem;
   }
-  
-  .swiperImage {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+
+  .cadIframe {
+    height: 300px;
   }
-  
-  /* Add custom styles for Swiper navigation buttons if needed */
-  
-  
-  
+}
