@@ -26,7 +26,7 @@ export default function Header() {
   ];
 
   return (
-    <nav className="flex w-full select-none justify-center py-2 pt-6 font-light md:px-28 md:pb-2">
+    <nav className="flex w-full select-none justify-center bg-gradient-to-r from-primary to-indigo-500 py-4 font-light text-primary-foreground shadow">
       <div className="container flex flex-col items-center justify-between md:flex-row">
         {/* Logo */}
         <Link href="/" className="cursor-pointer text-5xl drop-shadow-2xl">
@@ -44,7 +44,7 @@ export default function Header() {
             <Link
               key={link.name}
               href={link.path}
-              className="cursor-pointer transition-colors duration-200 hover:text-blue-500"
+              className="cursor-pointer transition-colors duration-200 text-primary-foreground hover:text-white/80"
             >
               {link.name}
             </Link>
@@ -54,20 +54,20 @@ export default function Header() {
               href="/projects"
               onMouseOver={() => setIsDropdownVisible(true)}
               onTouchStart={toggleDropdown}
-              className="cursor-pointer transition-colors duration-200 hover:text-blue-500"
+              className="cursor-pointer transition-colors duration-200 text-primary-foreground hover:text-white/80"
             >
               Projects
             </Link>
             {isDropdownVisible && (
               <div
-                className="absolute mt-2 rounded bg-white py-2 shadow-md"
+                className="absolute mt-2 rounded bg-background py-2 shadow-lg"
                 onMouseLeave={() => setIsDropdownVisible(false)}
               >
                 {projectsDropdown.map((project) => (
                   <Link
                     key={project.name}
                     href={project.path}
-                    className="block px-4 py-2 text-sm hover:bg-gray-200"
+                    className="block px-4 py-2 text-sm text-foreground hover:bg-muted"
                   >
                     {project.name}
                   </Link>
@@ -90,7 +90,7 @@ export default function Header() {
               width={40}
               height={40}
               style={{ objectFit: "contain" }}
-              className="cursor-pointer"
+              className="cursor-pointer hover:opacity-80"
             />
           </Link>
         </div>
