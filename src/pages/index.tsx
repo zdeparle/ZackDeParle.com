@@ -8,16 +8,17 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      
       <Hero />
       <About />
       <Skills />
       {/* Update this section for the projects link */}
-      <section className="text-center my-8">
-      <Link href="/projects"legacyBehavior>
-          <a className="largeEmojiButton" aria-label="View Projects">
-            🏗️ {"Projects"}
-          </a>
+      <section className="my-8 text-center">
+        <Link
+          href="/projects"
+          className="largeEmojiButton"
+          aria-label="View Projects"
+        >
+          🏗️ {"Projects"}
         </Link>
       </section>
       <Contact />
