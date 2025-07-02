@@ -4,13 +4,13 @@ export default function about() {
   return (
     <section
       id="about"
-      className="mx-auto my-16 flex flex-col items-center justify-center gap-4 px-2 md:my-20  md:max-w-full lg:flex-row lg:items-start lg:gap-16"
+      className="mx-auto my-16 flex flex-col items-center justify-center gap-4 rounded-xl bg-card px-6 py-10 shadow lg:flex-row lg:items-start lg:gap-16"
     >
       <div className="order-2 lg:order-1 lg:w-2/3">
         <MotionDiv delayOffset={0.2}>
           <h2 className="mb-3 w-full text-center md:mb-6">About Me</h2>
         </MotionDiv>
-        <article className="flex flex-col gap-4">
+        <article className="flex flex-col gap-4 text-lg leading-relaxed">
           <MotionDiv delayOffset={0.4}>
             <p>
               Hello, I'm Zachary (Zack) DeParle. I'm a
@@ -48,7 +48,7 @@ export default function about() {
           <img
             src="/photo.jpeg"
             alt="photo"
-            className="w-[350px] min-w-[300px] rounded-xl transition-all hover:rotate-3 hover:scale-105"
+            className="w-[350px] min-w-[300px] rounded-xl ring-4 ring-primary/30 transition-all hover:rotate-3 hover:scale-105"
           />
         </MotionDiv>
       </div>

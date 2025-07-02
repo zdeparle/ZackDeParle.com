@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="mx-auto my-16 flex flex-col items-center justify-center gap-4 px-2 md:my-20 md:max-w-full"
+      className="mx-auto my-16 flex flex-col items-center justify-center gap-6 rounded-xl bg-card px-6 py-12 shadow md:max-w-full"
     >
       
 
@@ -14,10 +14,14 @@ const Contact = () => {
 
         {/* Email Button */}
         <MotionDiv delayOffset={0.5}>
-  <a href="mailto:zachary.deparle@gmail.com" className={styles.contactButton} aria-label="Email Me">
-    📧 {"Email Me!"}
-  </a>
-</MotionDiv>
+          <a
+            href="mailto:zachary.deparle@gmail.com"
+            className={styles.contactButton}
+            aria-label="Email Me"
+          >
+            📧 {"Email Me!"}
+          </a>
+        </MotionDiv>
 
 
        
