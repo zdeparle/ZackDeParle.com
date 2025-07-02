@@ -2,7 +2,7 @@ import ContactList from "@/components/contact-list";
 import MotionText from "@/components/motion-text";
 import MotionDiv from "@/components/motion-div";
 
-export default function hero() {
+export default function Hero() {
   return (
     <section className="my-8 flex flex-col items-center justify-center">
       <h1 className="mb-4 text-[1.4rem] md:text-[2rem]">
@@ -37,7 +37,8 @@ export default function hero() {
         </MotionDiv>
         <MotionDiv delayOffset={1.4}>
           <p>
-            I'm currently a Mechanical Engineering and Computer Science student at Duke University, passionate about technology and engineering.
+            I'm currently a Mechanical Engineering and Computer Science student
+            at Duke University, passionate about technology and engineering.
           </p>
         </MotionDiv>
       </div>
