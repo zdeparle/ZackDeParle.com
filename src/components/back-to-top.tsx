@@ -39,7 +39,7 @@ export default function BackToTop() {
       initial="hidden"
       animate={controls}
       variants={variants}
-      className="fixed bottom-5 right-5"
+      className="fixed bottom-5 right-5 z-50"
     >
       <TooltipProvider delayDuration={0}>
         <Tooltip>
@@ -48,14 +48,14 @@ export default function BackToTop() {
               onClick={() => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
-              className="h-11 w-11 rounded-full p-0"
+              className="group h-12 w-12 rounded-full bg-gradient-to-br from-primary to-indigo-600 p-0 shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl hover:shadow-primary/50"
               aria-label="Press to return to top"
             >
-              <ChevronUp />
+              <ChevronUp className="h-5 w-5 text-primary-foreground transition-transform duration-300 group-hover:-translate-y-1" />
             </Button>
           </TooltipTrigger>
           <TooltipContent sideOffset={6}>
-            <p>Return</p>
+            <p>Return to top</p>
           </TooltipContent>
         </Tooltip>
       </TooltipProvider>

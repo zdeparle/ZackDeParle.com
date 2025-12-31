@@ -87,7 +87,22 @@
     @apply scroll-smooth border-border;
   }
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Better focus styles for accessibility */
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+  
+  /* Selection styles */
+  ::selection {
+    @apply bg-primary/30 text-foreground;
   }
 }
 
@@ -127,15 +142,19 @@ h3 {
   cursor: pointer;
 }
 .largeEmojiButton {
-  font-size: 4rem; /* Large size for the emoji */
-  display: inline-block; /* To apply padding and centering */
-  padding: 20px; /* Space around the emoji */
-  border: none; /* Optional: remove if you want a border */
-  background: transparent; /* Ensures no background color */
-  cursor: pointer; /* Changes the cursor to signify a clickable element */
-  /* Additional styling can be applied as needed */
-  text-decoration: none; /* Removes underline from links */
-  color: inherit; /* Keeps the emoji color consistent with other text */
+  font-size: 4rem;
+  display: inline-block;
+  padding: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+}
+
+.largeEmojiButton:hover {
+  transform: scale(1.1);
 }
 
 .email-button:hover {
@@ -167,54 +186,8 @@ h3 {
   h1 {
     font-size: 2.7rem;
   }
-  .nav-links > * {
-    @apply relative;
-  }
-  .nav-links > *::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 1.25px;
-    background: black;
-    transition: width 0.2s ease-out;
-  }
-  .nav-links > *:hover::after {
-    width: 100%;
-  }
 }
-/* Media Queries for smaller screens */
-@media (max-width: 640px) { /* Tailwind's 'sm' breakpoint */
-  .nav-links {
-    @apply flex-col items-center;
-  }
-
-  .nav-links > * {
-    @apply w-full text-center;
-  }
-  .nav-links > * {
-    @apply w-full text-center relative underline; /* Apply underline to all nav link children */
-  }
-  
-
-  /* Optionally, adjust the padding and margin for the nav items */
-  .nav-links > * {
-    @apply py-2; /* Adds vertical padding */
-    @apply my-1; /* Adds vertical margin */
-  }
-
-  .header-logo {
-    @apply w-full; /* Make the logo take the full width of the container */
-    @apply px-4; /* Add some horizontal padding */
-    @apply py-2; /* Add some vertical padding */
-    /* Any additional styles for the logo on narrow screens */
-  }
-
-  .nav-menu {
-    @apply flex-col; /* Stack the navigation items vertically */
-    @apply items-center; /* Center the items vertically */
-    @apply py-2; /* Add some vertical padding between items */
-    /* Any additional styles for the navigation menu on narrow screens */
-  }
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }

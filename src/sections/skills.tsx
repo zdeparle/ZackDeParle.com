@@ -132,16 +132,22 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="flex w-full flex-col items-center text-center">
+    <section id="skills" className="my-20 flex w-full flex-col items-center text-center">
       <MotionDiv>
-        <h2 className="mb-4">My Skills</h2>
+        <h2 className="mb-4 text-3xl font-bold tracking-tight md:mb-8 md:text-4xl">
+          <span className="bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent">
+            My Skills
+          </span>
+        </h2>
       </MotionDiv>
-      <div className="flex flex-wrap justify-center">
+      <div className="flex w-full flex-col gap-12">
         {data.map((item, index) => (
-          <MotionDiv key={index}>
+          <MotionDiv key={index} delayOffset={index * 0.1}>
             <div className="mb-6 md:px-2">
-              <h3>{item.title}</h3>
-              <MotionList className="flex flex-wrap justify-evenly gap-0 md:gap-5 md:px-6 lg:justify-center">
+              <h3 className="mb-6 text-xl font-semibold text-foreground/90 md:text-2xl">
+                {item.title}
+              </h3>
+              <MotionList className="flex flex-wrap justify-center gap-4 md:gap-6 md:px-6">
                 {item.skills.map((skill) => (
                   <SkillCard key={skill.name} {...skill} />
                 ))}
@@ -156,12 +162,18 @@ export default function Skills() {
 
 function SkillCard({ icon, name }: { icon: StaticImageData; name: string }) {
   return (
-    <div className="group rounded-xl bg-card p-5 text-center shadow transition-transform hover:-translate-y-1 hover:shadow-lg">
-      <div className="flex flex-col items-center gap-2">
-        <div className="flex h-16 w-16 items-center justify-center">
-          <Image src={icon} alt={name} priority />
+    <div className="group relative overflow-hidden rounded-xl border border-border/50 bg-gradient-to-br from-card to-card/50 p-5 text-center shadow-md backdrop-blur-sm transition-all duration-300 hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/20">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/0 to-primary/0 opacity-0 transition-opacity duration-300 group-hover:opacity-10" />
+      <div className="relative flex flex-col items-center gap-3">
+        <div className="flex h-16 w-16 items-center justify-center transition-transform duration-300 group-hover:scale-110">
+          <Image 
+            src={icon} 
+            alt={name} 
+            priority 
+            className="transition-all duration-300 group-hover:brightness-110"
+          />
         </div>
-        <p className="font-medium">{name}</p>
+        <p className="font-semibold text-sm transition-colors duration-300 group-hover:text-primary">{name}</p>
       </div>
     </div>
   );

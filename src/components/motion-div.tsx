@@ -23,14 +23,14 @@ export default function MotionDiv({
   return (
     <motion.div
       ref={ref}
-      className={cn("relative flex items-center justify-center")}
-      initial={{ y: 100, opacity: 0 }}
+      className={cn("relative flex items-center justify-center", className)}
+      initial={{ y: 50, opacity: 0 }}
       animate={controls}
       transition={{
         type: "spring",
-        damping: 30,
+        damping: 25,
         stiffness: 200,
-        delay: delayOffset,
+        delay: delayOffset || 0,
       }}
     >
       {children}
